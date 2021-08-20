@@ -20,4 +20,4 @@ and openings.js exposes a [better-sqlite3](https://github.com/JoshuaWise/better-
 
 openings.json is simply the SQLite3 table exported to JSON format.
 
-The dataset stores moves in Smith Notation. A utility function depending on the popular [chess.js](https://github.com/jhlywa/chess.js/) which converts any notation to [Standard Algebraic Notation](https://en.wikipedia.org/wiki/Algebraic_notation_(chess)) is exposed in convertMoveNotation.js
+The dataset stores moves in Smith Notation. A utility function depending on the popular [chess.js](https://github.com/jhlywa/chess.js/) which converts any notation to [Standard Algebraic Notation](https://en.wikipedia.org/wiki/Algebraic_notation_(chess)) is exposed in convertMoveNotation.js. This is also used in openings.js
