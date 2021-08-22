@@ -36,6 +36,8 @@ console.log(
     )
 );
 // Will give { eco: 'A00', name: 'Amar Opening: Gent Gambit' }
+
+
 console.log(
     op.findEcoAndNameOfFen(
         "rn1qkbnr/ppp2ppp/8/3p4/8/6PB/PPPPP3/RNBQ1RK1 b kq -"
