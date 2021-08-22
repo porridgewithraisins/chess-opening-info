@@ -1,7 +1,7 @@
 # Chess Opening Info
 General datasets.
 
-Also presents an API to get opening ECO code, Opening name, and move list to reach that FEN, given the FEN of a position.
+Also presents an SQLite api to interact with the dataset.
 
 Easily used with JavaScript applications.
 
