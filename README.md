@@ -24,8 +24,8 @@ import { Openings } from "./openings.js";
 
 const op = new Openings("./data/openings.sqlite");
 /*
-    Note that all FENs are stored without the last two fields, but the query
-    looks for an instring, so both FENs with and without the ply information
+    Note that all FENs are stored without the last two fields (the ply information),
+    but the query looks for an instring, so both FENs with and without the ply information
     will work. Note that in FENs without the ply information, there is no space
     after the last field.
 */
