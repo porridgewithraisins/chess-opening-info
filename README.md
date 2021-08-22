@@ -71,6 +71,7 @@ console.log(op.findFenAndMovesOfName("London System", true));
 console.log(op.convertToAlgebraic("e2e4 e7e5"));
 // gives 1. e4 e5
 ```
+It can convert other formats to SAN too, so if you are using ICCF notation, you can just as well pass it to this function, to get back the SAN.
 The conversion depends on the popular [chess.js](https://github.com/jhlywa/chess.js/) library, which you're probably already using if you are seeing this repo.
 
 
