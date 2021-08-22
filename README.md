@@ -1,10 +1,10 @@
 # Chess Opening Info
-
-Get opening ECO code, Opening name, and move list to reach that FEN, given the FEN of a position.
+General datasets
+Also presents an API to get opening ECO code, Opening name, and move list to reach that FEN, given the FEN of a position.
 
 Easily used with JavaScript applications.
 
-The dataset is due to https://github.com/niklasf/chess-openings. (TSV Format)
+The original dataset is due to https://github.com/niklasf/chess-openings. (TSV Format)
 
 codes.json contains `FEN : {...otherInfo}`
 and can be used like so:
