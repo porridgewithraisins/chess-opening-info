@@ -76,7 +76,7 @@ console.log(op.findFenAndMovesOfName("London System", true));
 // you can also use the standalone conversion function if you wish
 console.log(op.convertToAlgebraic("e2e4 e7e5"));
 // gives 1. e4 e5
+// It can convert other formats to SAN too, so if you are using ICCF notation
+// you can just as well pass it to this function, to get back the SAN.
 ```
-It can convert other formats to SAN too, so if you are using ICCF notation, you can just as well pass it to this function, to get back the SAN.
-
 openings.json is simply the SQLite3 table exported to JSON format.
