@@ -1,6 +1,6 @@
 {
   "name": "chess-opening-info",
-  "version": "1.1.2",
+  "version": "1.1.1",
   "description": "",
   "type": "module",
   "main": "src/openings.js",
