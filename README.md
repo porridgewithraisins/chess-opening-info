@@ -1,4 +1,5 @@
 # Chess Opening Info
+
 General chess opening dataset, made to be
 easily used with JavaScript applications.
 
@@ -8,9 +9,11 @@ The original dataset is due to https://github.com/niklasf/chess-openings. (TSV F
 
 codes.json contains `FEN : {...otherInfo}`
 and can be used like so:
+
 ```js
-const getInfo = (FEN) => require('codes.json')[FEN];
+const getInfo = (FEN) => require("codes.json")[FEN];
 ```
+
 For Typescript, set `"resolveJsonModule": true` in your `tsconfig.json`, and you can simply import the JSON file
 
 **Note**: `Object[key]` lookup (even from JSON) in extremely fast in JavaScript, so
@@ -18,9 +21,11 @@ if your only requirement is getting ECO Code and Name from an
 FEN, you should probably just use this, and not bother with the SQLite API.
 
 openings.sqlite contains an SQLite3 table
+
 ```sql
 CREATE TABLE openings (FEN PRIMARY KEY TEXT, ECO TEXT, NAME TEXT, MOVES TEXT);
 ```
+
 and openings.js exposes a [better-sqlite3](https://github.com/JoshuaWise/better-sqlite3/) API to access this database.
 
 openings.js depends on the popular [chess.js](https://github.com/jhlywa/chess.js/), which you probably already use if you need this repo.
@@ -28,18 +33,32 @@ openings.js depends on the popular [chess.js](https://github.com/jhlywa/chess.js
 ## Usage
 
 For npm:
+
 ```bash
 npm i chess-opening-info
 ```
+
 For yarn:
+
 ```bash
 yarn add chess-opening-info
 ```
 
-## API
-```js
-import { Openings } from "./openings.js";
+Then in your project,
 
+```js
+const { Openings } = require("chess-opening-info");
+```
+
+or with `import`,
+
+```js
+import { Openings } from "chess-opening-info";
+```
+
+## API
+
+```js
 const op = new Openings("./data/openings.sqlite");
 /*
     Note that all FENs are stored without the last two fields (the ply information),
@@ -90,6 +109,9 @@ console.log(op.convertToAlgebraic("e2e4 e7e5"));
 // gives 1. e4 e5
 // It can convert any other format to SAN too, so if you are using ICCF notation
 // you can just as well pass it to this function, to get back the SAN.
-
 ```
+`sample.js` contains the JSDoc comments.
+
+<hr>
+
 openings.json is simply the SQLite3 table exported to JSON format.
