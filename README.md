@@ -32,13 +32,13 @@ openings.js depends on the popular [chess.js](https://github.com/jhlywa/chess.js
 
 ## Usage
 
-For npm:
+With npm:
 
 ```bash
 npm i chess-opening-info
 ```
 
-For yarn:
+With yarn:
 
 ```bash
 yarn add chess-opening-info
