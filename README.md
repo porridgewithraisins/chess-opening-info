@@ -110,7 +110,7 @@ console.log(op.convertToAlgebraic("e2e4 e7e5"));
 // It can convert any other format to SAN too, so if you are using ICCF notation
 // you can just as well pass it to this function, to get back the SAN.
 ```
-`sample.js` contains the JSDoc comments.
+`src/openings.js` contains the JSDoc comments.
 
 <hr>
 
