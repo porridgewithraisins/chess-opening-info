@@ -1,9 +1,8 @@
 # Chess Opening Info
-General datasets.
+General chess opening dataset, made to be
+easily used with JavaScript applications.
 
-Also presents an SQLite api to interact with the dataset.
-
-Easily used with JavaScript applications.
+Also presents an SQLite3 API to interact with the dataset.
 
 The original dataset is due to https://github.com/niklasf/chess-openings. (TSV Format)
 
@@ -14,7 +13,7 @@ const getInfo = (FEN) => require('codes.json')[FEN];
 ```
 For Typescript, set `"resolveJsonModule": true` in your `tsconfig.json`, and you can simply import the JSON file
 
-**Note**: Object[key] lookup (even from JSON) in extremely fast in JavaScript, so
+**Note**: `Object[key]` lookup (even from JSON) in extremely fast in JavaScript, so
 if your only requirement is getting ECO Code and Name from an
 FEN, you should probably just use this, and not bother with the SQLite API.
 
@@ -25,6 +24,18 @@ CREATE TABLE openings (FEN PRIMARY KEY TEXT, ECO TEXT, NAME TEXT, MOVES TEXT);
 and openings.js exposes a [better-sqlite3](https://github.com/JoshuaWise/better-sqlite3/) API to access this database.
 
 openings.js depends on the popular [chess.js](https://github.com/jhlywa/chess.js/), which you probably already use if you need this repo.
+
+## Usage
+
+For npm:
+```bash
+npm i chess-opening-info
+```
+For yarn:
+```bash
+yarn add chess-opening-info
+```
+
 ## API
 ```js
 import { Openings } from "./openings.js";
