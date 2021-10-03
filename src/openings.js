@@ -35,7 +35,7 @@ export class Openings {
         return { eco: row[ECO_COLUMN], name: row[NAME_COLUMN] };
     }
 
-    findFenAndMovesOfName(Name, algebraic = false) {
+    findFenAndMovesOfName(Name, options) {
         const row = this.stmtFenAndMoves.get(Name);
 
         if (row === undefined) {
@@ -43,7 +43,7 @@ export class Openings {
         }
         return {
             fen: row[FEN_COLUMN],
-            moves: algebraic
+            moves: options?.algebraic
                 ? this.convertToAlgebraic(row[MOVES_COLUMN])
                 : row[MOVES_COLUMN],
         };

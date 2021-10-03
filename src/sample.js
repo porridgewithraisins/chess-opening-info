@@ -21,8 +21,6 @@ console.log(
 );
 // Will give { eco: 'A00', name: 'Amar Opening: Gent Gambit' }
 
-
-
 // returns FEN and Moves in Smith Notation (often used in chess programming)
 // Smith notation : startSquareEndSquare. e.g 1.e4 -> e2e4 or 5. O-O -> e1g1
 console.log(op.findFenAndMovesOfName("Nimzowitsch Defense: Wheeler Gambit"));
@@ -34,10 +32,9 @@ console.log(op.findFenAndMovesOfName("Nimzowitsch Defense: Wheeler Gambit"));
     }
 */
 
-
 // second argument `algebraic` is false by default, setting it to
 // true converts the movelist to Standard Algebraic Notation
-console.log(op.findFenAndMovesOfName("London System", true));
+console.log(op.findFenAndMovesOfName("London System", { algebraic: true }));
 /* output
     {
         fen: 'rnbqkb1r/pppppp1p/5np1/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq -',
