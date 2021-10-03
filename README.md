@@ -25,7 +25,7 @@ CREATE TABLE openings (FEN PRIMARY KEY TEXT, ECO TEXT, NAME TEXT, MOVES TEXT);
 and openings.js exposes a [better-sqlite3](https://github.com/JoshuaWise/better-sqlite3/) API to access this database.
 
 openings.js depends on the popular [chess.js](https://github.com/jhlywa/chess.js/), which you probably already use if you need this repo.
-## Usage
+## API
 ```js
 import { Openings } from "./openings.js";
 
