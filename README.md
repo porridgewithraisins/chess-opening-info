@@ -33,8 +33,7 @@ const op = new Openings("./data/openings.sqlite");
 /*
     Note that all FENs are stored without the last two fields (the ply information),
     but the query looks for an instring, so both FENs with and without the ply information
-    will work. Note that in FENs without the ply information, there is no space
-    after the last field.
+    will work.
 */
 
 console.log(
@@ -55,6 +54,7 @@ console.log(
 /*
     returns FEN and Moves in Smith Notation (often used in chess programming)
     Smith notation : startSquareEndSquare. e.g 1.e4 -> e2e4 or 5. O-O -> e1g1 
+    Note that there is no space after the last field in FENs.
 */
 console.log(op.findFenAndMovesOfName("Nimzowitsch Defense: Wheeler Gambit"));
 
