@@ -12,6 +12,8 @@ and can be used like so:
 ```js
 const getInfo = (FEN) => require('codes.json')[FEN];
 ```
+For Typescript, set `"resolveJsonModule": true` in your `tsconfig.json`, and you can simply import the JSON file
+
 **Note**: Object[key] lookup (even from JSON) in extremely fast in JavaScript, so
 if your only requirement is getting ECO Code and Name from an
 FEN, you should probably just use this, and not bother with the SQLite API.
