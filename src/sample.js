@@ -2,10 +2,9 @@ import { Openings } from "./openings.js";
 
 const op = new Openings("./data/openings.sqlite");
 /*
-    Note that all FENs are stored without the last two fields, but the query
-    looks for an instring, so both FENs with and without the ply information
-    will work. Note that in FENs without the ply information, there is no space
-    after the last field.
+    Note that all FENs are stored without the last two fields (the ply information),
+    but the query looks for an instring, so both FENs with and without the ply information
+    will work.
 */
 
 console.log(
@@ -14,6 +13,7 @@ console.log(
     )
 );
 // Will give { eco: 'A00', name: 'Amar Opening: Gent Gambit' }
+
 console.log(
     op.findEcoAndNameOfFen(
         "rn1qkbnr/ppp2ppp/8/3p4/8/6PB/PPPPP3/RNBQ1RK1 b kq -"
@@ -21,8 +21,11 @@ console.log(
 );
 // Will give { eco: 'A00', name: 'Amar Opening: Gent Gambit' }
 
-// returns FEN and Moves in Smith Notation (often used in chess programming)
-// Smith notation : startSquareEndSquare. e.g 1.e4 -> e2e4 or 5. O-O -> e1g1
+/*
+    returns FEN and Moves in Smith Notation (often used in chess programming)
+    Smith notation is as follows: startSquareEndSquare. e.g 1.e4 is e2e4 and 5. O-O is e1g1 
+    Note that there is no space after the last field in FENs.
+*/
 console.log(op.findFenAndMovesOfName("Nimzowitsch Defense: Wheeler Gambit"));
 
 /* output
@@ -32,7 +35,7 @@ console.log(op.findFenAndMovesOfName("Nimzowitsch Defense: Wheeler Gambit"));
     }
 */
 
-// second argument `algebraic` is false by default, setting it to
+// option `algebraic` is false by default, setting it to
 // true converts the movelist to Standard Algebraic Notation
 console.log(op.findFenAndMovesOfName("London System", { algebraic: true }));
 /* output
@@ -45,3 +48,5 @@ console.log(op.findFenAndMovesOfName("London System", { algebraic: true }));
 // you can also use the standalone conversion function if you wish
 console.log(op.convertToAlgebraic("e2e4 e7e5"));
 // gives 1. e4 e5
+// It can convert any other format to SAN too, so if you are using ICCF notation
+// you can just as well pass it to this function, to get back the SAN.

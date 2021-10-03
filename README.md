@@ -43,7 +43,6 @@ console.log(
 );
 // Will give { eco: 'A00', name: 'Amar Opening: Gent Gambit' }
 
-
 console.log(
     op.findEcoAndNameOfFen(
         "rn1qkbnr/ppp2ppp/8/3p4/8/6PB/PPPPP3/RNBQ1RK1 b kq -"
@@ -53,7 +52,7 @@ console.log(
 
 /*
     returns FEN and Moves in Smith Notation (often used in chess programming)
-    Smith notation : startSquareEndSquare. e.g 1.e4 -> e2e4 or 5. O-O -> e1g1 
+    Smith notation is as follows: startSquareEndSquare. e.g 1.e4 is e2e4 and 5. O-O is e1g1 
     Note that there is no space after the last field in FENs.
 */
 console.log(op.findFenAndMovesOfName("Nimzowitsch Defense: Wheeler Gambit"));
@@ -64,7 +63,6 @@ console.log(op.findFenAndMovesOfName("Nimzowitsch Defense: Wheeler Gambit"));
         moves: 'e2e4 b8c6 b2b4'
     }
 */
-
 
 // option `algebraic` is false by default, setting it to
 // true converts the movelist to Standard Algebraic Notation
@@ -81,5 +79,6 @@ console.log(op.convertToAlgebraic("e2e4 e7e5"));
 // gives 1. e4 e5
 // It can convert any other format to SAN too, so if you are using ICCF notation
 // you can just as well pass it to this function, to get back the SAN.
+
 ```
 openings.json is simply the SQLite3 table exported to JSON format.
